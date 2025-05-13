@@ -1,6 +1,6 @@
 spring:
   application:
-    name: product-service
+    name: mathru-product-service
     
   h2:    console:      enabled: true
       

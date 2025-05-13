@@ -11,7 +11,7 @@
 	<groupId>com.manju.cloud</groupId>
 	<artifactId>product-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>product-service</name>
+	<name>mathru-product-service</name>
 	<description>Product service to fetch and update products </description>
 	<url/>
 	<licenses>
@@ -107,7 +107,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		<finalName>product-service</finalName>
+		<finalName>mathru-product-service</finalName>
 	</build>
 
 </project>
