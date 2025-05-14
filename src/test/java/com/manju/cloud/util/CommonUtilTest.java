@@ -60,5 +60,26 @@ public class CommonUtilTest {
 		}
 
 	}
+	
+	
+	
+	@Test
+	public void testStaticMethod() {
+		
+		try(MockedStatic<CommonUtil> mockStatic = Mockito.mockStatic(CommonUtil.class)){
+			
+			Product prodRequest = new Product();
+			prodRequest.setProductId(100);
+			prodRequest.setProductName("iPhone 11");
+			prodRequest.setPrice(10000);
+			prodRequest.setQuantity(5);
+			
+			mockStatic.when(() -> CommonUtil.isValidRequest(prodRequest)).thenReturn(true);
+			
+			assertEquals(true, CommonUtil.isValidRequest(prodRequest));
+			
+		}		
+		
+	}
 
 }
