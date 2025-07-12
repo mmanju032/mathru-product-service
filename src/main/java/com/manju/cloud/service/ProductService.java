@@ -3,9 +3,12 @@ package com.manju.cloud.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.manju.cloud.config.SecurityConfig;
 import com.manju.cloud.entity.Product;
 import com.manju.cloud.repository.ProductRepository;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
@@ -13,6 +16,14 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 
 @Service
 public class ProductService {
+	
+//	@Autowired
+//	private SecurityConfig config;
+	
+	@PostConstruct
+	public void init() {
+		System.out.println("@PostConstruct init method !");
+	}
 	
 	@Autowired
 	private ProductRepository repo;

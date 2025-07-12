@@ -1,6 +1,7 @@
 package com.manju.cloud.util;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.lang.reflect.Method;
 import java.util.Optional;
 
@@ -80,6 +81,23 @@ public class CommonUtilTest {
 			
 		}		
 		
+	}
+	
+	@Test
+	public void testStaticMethod2() {
+		try {			
+			// validateTest:
+			Product prodRequest = new Product();
+			prodRequest.setProductId(100);
+			prodRequest.setProductName("iPhone 11");
+			prodRequest.setPrice(10000);
+			prodRequest.setQuantity(5);
+
+			assertEquals(true, CommonUtil.isValidRequest(prodRequest));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 	}
 
 }
